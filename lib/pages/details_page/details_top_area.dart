@@ -13,6 +13,7 @@ class DetailsTopArea extends StatelessWidget {
         if (goodsInfo != null) {
           return Container(
             color: Colors.white,
+            padding: EdgeInsets.only(top: 15),
             child: Column(
               children: <Widget>[
                 _goodsImage(goodsInfo.image1),
@@ -20,6 +21,7 @@ class DetailsTopArea extends StatelessWidget {
                 _goodsNum(goodsInfo.goodsSerialNumber),
                 _goodsPrice(goodsInfo.presentPrice, goodsInfo.oriPrice),
                 Container(
+                  margin: EdgeInsets.only(top: 8),
                   color: Colors.black12,
                   height: 10,
                 ),
@@ -58,7 +60,7 @@ class DetailsTopArea extends StatelessWidget {
   //商品编号
   Widget _goodsNum(num) {
     return Container(
-      width: ScreenUtil().setWidth(730),
+      width: ScreenUtil().setWidth(740),
       padding: EdgeInsets.only(left: 15),
       margin: EdgeInsets.only(top: 8),
       child: Text(
@@ -71,6 +73,7 @@ class DetailsTopArea extends StatelessWidget {
   //商品价格
   Widget _goodsPrice(presentPrice, oriPrice) {
     return Container(
+      margin: EdgeInsets.only(top: 8),
       child: Row(
         children: <Widget>[
           Container(
@@ -78,14 +81,14 @@ class DetailsTopArea extends StatelessWidget {
             child: Text(
               '￥${presentPrice}',
               style: TextStyle(
-                  color: Colors.pink, fontSize: ScreenUtil().setSp(24)),
+                  color: Colors.pink, fontSize: ScreenUtil().setSp(28)),
             ),
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
             child: Text(
               '市场价：',
-              style: TextStyle(fontSize: ScreenUtil().setSp(20)),
+              style: TextStyle(fontSize: ScreenUtil().setSp(24)),
             ),
           ),
           Container(
@@ -94,7 +97,7 @@ class DetailsTopArea extends StatelessWidget {
               '￥${oriPrice}',
               style: TextStyle(
                   color: Colors.black12,
-                  fontSize: ScreenUtil().setSp(18),
+                  fontSize: ScreenUtil().setSp(20),
                   decoration: TextDecoration.lineThrough),
             ),
           ),
