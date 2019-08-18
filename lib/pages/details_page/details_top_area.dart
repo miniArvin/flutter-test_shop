@@ -92,7 +92,6 @@ class DetailsTopArea extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 15),
             child: Text(
               '￥${oriPrice}',
               style: TextStyle(
